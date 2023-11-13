@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/diptobiswasanime4/SurfChat#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "socket.io": "^4.7.2",
     "uuid": "^9.0.1"
   },
