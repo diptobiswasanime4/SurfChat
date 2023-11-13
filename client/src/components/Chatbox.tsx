@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { SocketContext } from "../SocketProvider";
+import { useRecoilState } from "recoil";
+import { chatState } from "../state/atoms/ChatState";
 
 function Chatbox() {
-  const [chat, setChat] = useState([]);
+  const [chat, setChat] = useRecoilState(chatState);
   const socket = useContext(SocketContext);
 
   console.log(socket);
