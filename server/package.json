@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diptobiswasanime4/SurfChat.git"
+  },
+  "author": "Arya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diptobiswasanime4/SurfChat/issues"
+  },
+  "homepage": "https://github.com/diptobiswasanime4/SurfChat#readme",
+  "dependencies": {
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
