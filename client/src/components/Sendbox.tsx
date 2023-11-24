@@ -1,11 +1,20 @@
 import React, { useState, useContext } from "react";
 import { SocketContext } from "../SocketProvider";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { userState } from "../state/atoms/userState";
+import { chatState } from "../state/atoms/ChatState";
 
 function Sendbox() {
+  const user = useRecoilValue(userState);
+  const [chat, setChat] = useRecoilState(chatState);
   const [inputText, setInputText] = useState("");
   const socket = useContext(SocketContext);
+
+  console.log("User: ", user);
+
   async function sendMessage() {
-    socket.emit("send-chat-message", inputText);
+    setChat([...chat, { user: user, text: inputText, dir: " ml-auto" }]);
+    await socket.emit("send-chat-message", { user: user, text: inputText });
   }
   return (
     <div className="flex gap-2 w-3/4">
